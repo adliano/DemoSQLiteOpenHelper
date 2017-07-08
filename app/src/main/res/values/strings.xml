@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">DemoSQLiteOpenHelper</string>
+    <string name="user_name">User Name</string>
+    <string name="city">City</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="load">Load</string>
+    <string name="check_fields">Check Fields</string>
+</resources>
