@@ -7,11 +7,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.AppCompatEditText;
 import android.support.v7.widget.AppCompatTextView;
+import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
-
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * Created by Adliano Alves on 7/7/17.
@@ -61,6 +59,7 @@ public class DemoMainActivity extends AppCompatActivity
 
             // Insert the new row, returning the primary key value of the new row
             long newRowId = database.insert(DatabaseEntries.TableEntries.TABLE_NAME,null,contentValues);
+            Log.d("*** New Row ID ***",String.valueOf(newRowId));
 
             getSQLiteData();
         }
@@ -90,7 +89,6 @@ public class DemoMainActivity extends AppCompatActivity
 
         // Populate to the TextView
         String toSet = "";
-        List usersInfo = new ArrayList<>();
         while(cursor.moveToNext())
         {
             toSet += cursor.getString(cursor.getColumnIndexOrThrow(DatabaseEntries.TableEntries.COLUMN_USER_NAME))+
